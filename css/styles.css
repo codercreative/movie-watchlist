@@ -1,0 +1,204 @@
+/* General styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url(../images/bg-image.png);
+  max-width: 800px;
+  height: 35vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+/* adding dark transparent overlay to the hero image */
+.hero-section::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.98);
+  z-index: -1;
+}
+
+.hero-title,
+.hero-subtitle {
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 2rem;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.hero-subtitle:hover {
+  color: #f59f00;
+}
+
+/* Main section */
+/* Search section */
+.search-form {
+  max-width: 80%;
+  margin: 0 auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #d1d5db;
+  transform: translateY(-50%);
+  background-color: #fff;
+  align-items: stretch;
+}
+
+.icon-search-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 0.5em;
+}
+
+.search-icon {
+  cursor: pointer;
+  margin: 0 0.5em;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.search,
+.search-btn {
+  border: none;
+  cursor: pointer;
+}
+
+.search {
+  color: #6b7280;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 11em;
+}
+
+.search-btn {
+  flex-grow: 1;
+  color: #fff;
+  padding: 0.9em;
+  /* background-color: #6b7280; */
+  background-color: #5c940d;
+  border-radius: 0 0 8px 8px;
+  border: none;
+}
+
+/* Film reel section */
+.film-reel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.film-reel {
+  padding-top: 2em;
+  width: 10%;
+}
+
+.start-exploring {
+  padding-top: 0.7em;
+  color: #dfdddd;
+  font-size: 1.1rem;
+}
+
+/* Utility class  */
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .hero-section {
+    height: 40vh;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3em;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .search-form {
+    max-width: 60%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search-btn {
+    flex-grow: 0;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .search,
+  .search-btn {
+    font-size: 1.3em;
+  }
+
+  .start-exploring {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .search-form {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section {
+    height: 20vh;
+  }
+  .search-form {
+    max-width: 30%;
+  }
+}
