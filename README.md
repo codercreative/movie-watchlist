@@ -46,3 +46,9 @@ The user picks movies from the OMDb (Open Movie Database) API to add movies to a
 [Medium: Search Box Part 1](https://hecosbornerod.medium.com/search-box-part-1-ecommerce-accessibility-c7e7f0e527a8)
 
 [Web Dev Simplified: How to create a search bar in JavaScript](https://www.youtube.com/watch?v=TlP5WIxVirU)
+
+[Map an object to an array](https://www.30secondsofcode.org/js/s/listify/)
+
+[JavaScript Map](https://www.freecodecamp.org/news/javascript-map-how-to-use-the-js-map-function-array-method/)
+
+[Canva movie posters](https://www.youtube.com/watch?v=wKeFb23KHgw)

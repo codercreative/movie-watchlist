@@ -10,7 +10,9 @@
   <body>
     <section class="hero-section">
       <h1 class="hero-title">Find your film</h1>
-      <p class="hero-subtitle">My Watchlist</p>
+      <p class="hero-subtitle">
+        <a class="watchlist-link" href="watchlist/index.html">My Watchlist</a>
+      </p>
     </section>
     <main class="main">
       <section class="search-section">
@@ -20,7 +22,7 @@
           action="search"
           class="search-form"
         >
-          <label for="search" class="sr-only"></label>
+          <label for="search-input" class="sr-only"></label>
           <div class="icon-search-container">
             <img
               class="search-icon"
@@ -30,20 +32,18 @@
             <input
               type="search"
               name="q"
-              id="search"
-              class="search"
+              id="search-input"
+              class="search disappear"
               aria-label="search through movie
             list"
               placeholder="Search for a movie..."
               size="30"
             />
           </div>
-          <button type="submit" class="search-btn" id="search-btn">
-            Search
-          </button>
+          <button type="text" class="search-btn" id="search-btn">Search</button>
         </form>
       </section>
-      <section class="film-reel-section">
+      <section id="movie-section" class="movie-section">
         <img
           class="film-reel"
           src="../images/icon.png"

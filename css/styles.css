@@ -25,7 +25,7 @@ img {
   position: relative;
   background-image: url(../images/bg-image.png);
   max-width: 800px;
-  height: 35vh;
+  height: 40vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,12 @@ img {
   cursor: pointer;
 }
 
-.hero-subtitle:hover {
+.watchlist-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.watchlist-link:hover {
   color: #f59f00;
 }
 
@@ -98,6 +103,7 @@ img {
 
 .search,
 .search-btn {
+  font-size: 1.1rem;
   border: none;
   cursor: pointer;
 }
@@ -113,17 +119,81 @@ img {
   flex-grow: 1;
   color: #fff;
   padding: 0.9em;
-  /* background-color: #6b7280; */
   background-color: #5c940d;
   border-radius: 0 0 8px 8px;
   border: none;
 }
 
-/* Film reel section */
-.film-reel-section {
+.search-btn:hover {
+  background-color: #f59f00;
+}
+
+/* Movie list section */
+.movie-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  border-bottom: 1px solid grey;
+  max-width: 90%;
+}
+
+.poster-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.poster {
+  height: 200px;
+  width: calc(200px * 5 / 7);
+
+  object-fit: cover;
+}
+
+.movie-text-container {
+  flex: 1;
+}
+
+.movie-title-container {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.movie-title {
+  font-size: 1.3rem;
+  margin-right: 0.5em;
+  align-items: center;
+  max-width: 200px;
+}
+
+.star-icon {
+  width: 1.3em;
+  height: 1.3em;
+  margin-right: 0.3em;
+}
+
+.movie-details-container {
+  margin-top: 0.8em;
+}
+
+.movie-watchlist-container {
+  display: flex;
+  margin: 0.6em 0 0.8em 0;
+}
+
+.add-icon {
+  margin-right: 0.3em;
+}
+
+.plot {
+  color: #6b7280;
+  max-width: 300px;
 }
 
 .film-reel {
@@ -150,10 +220,14 @@ img {
   width: 1px;
 }
 
+.disappear:focus::placeholder {
+  color: transparent; /* Make the placeholder text transparent when focused */
+  justify-content: left;
+}
+
 /* Media queries */
 @media (min-width: 768px) {
   .hero-section {
-    height: 40vh;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 3em;
@@ -195,9 +269,6 @@ img {
 }
 
 @media (min-width: 1440px) {
-  .hero-section {
-    height: 20vh;
-  }
   .search-form {
     max-width: 30%;
   }
